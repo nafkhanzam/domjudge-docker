@@ -1,4 +1,4 @@
-version: '3.9'
+version: "3.9"
 
 x-common-configuration: &common-configuration
   image: itsniklas/domjudge-judgehost-nightly:latest
@@ -10,31 +10,30 @@ x-common-configuration: &common-configuration
     - judgehost.env
 
 services:
-  judgedaemon4:
+  judgedaemon0:
     <<: *common-configuration
-    hostname: judgedaemon4
-    container_name: judgedaemon4
+    hostname: judgedaemon0
+    container_name: judgedaemon0
     environment:
-      DAEMON_ID: 4
+      DAEMON_ID: 0
 
-  judgedaemon5:
+  judgedaemon1:
     <<: *common-configuration
-    hostname: judgedaemon5
-    container_name: judgedaemon5
+    hostname: judgedaemon1
+    container_name: judgedaemon1
     environment:
-      DAEMON_ID: 5
+      DAEMON_ID: 1
 
-  judgedaemon6:
+  judgedaemon2:
     <<: *common-configuration
-    hostname: judgedaemon6
-    container_name: judgedaemon6
+    hostname: judgedaemon2
+    container_name: judgedaemon2
     environment:
-      DAEMON_ID: 6
+      DAEMON_ID: 2
 
-  judgedaemon7:
+  judgedaemon3:
     <<: *common-configuration
-    hostname: judgedaemon7
-    container_name: judgedaemon7
+    hostname: judgedaemon3
+    container_name: judgedaemon3
     environment:
-      DAEMON_ID: 7
-
+      DAEMON_ID: 3
